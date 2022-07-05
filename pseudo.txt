@@ -1,0 +1,25 @@
+choices = Rock Paper Scissors
+
+Computer
+    Randomly chooses Rock, Paper, or Scissors
+
+Player
+    Input Rock, Paper, or Scissors
+    Must be case insensitive 
+
+Game
+    If player rock and computer scissors, then player wins. 
+    If player rock and computer rock, then tie.
+    If player rock and computer paper, then player loses.
+
+    If player scissors and computer paper, then player wins. 
+    If player scissors and computer scissors, then tie.
+    If player scissors and computer rock, then player loses.
+
+    If player paper and computer rock, then player wins. 
+    If player paper and computer paper, then tie. 
+    If player paper and computer scissors, then player loses. 
+
+    return result
+
+console.log(____)
