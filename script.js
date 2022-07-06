@@ -48,17 +48,22 @@ function game() {
         for (i = 0; i < 5; i++) {
             console.log("Round " + (i + 1));
             console.log(playRound());
+            score();
+            console.log("Player Score: " + playerScore + " | " + "Computer Score: " + compScore);
+        }
+    }
+
+    let playerScore = 0;
+    let compScore = 0;
+
+    function score() {
+        if (loop == "Computer chose Scissors. Rock beats Scissors. YOU WIN!") {
+            playerScore += 1; 
         }
     }
     
-    let score = 0;
-    function displayScore() {
-        if (loop == "Computer chose Scissors. Rock beats Scissors. YOU WIN!");
-        score = score + 1; 
-        console.log(score);
-    }
-    return loop(), displayScore();
     
+    return loop(), score();
 }
 
 console.log(game());
