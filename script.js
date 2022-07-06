@@ -46,6 +46,7 @@ function playRound(){
 function game() { 
     function loop() {
         for (i = 0; i < 5; i++) {
+            console.log("Round " + (i + 1));
             console.log(playRound());
         }
     }
