@@ -8,11 +8,10 @@ function playRound(){
         return compChoice;
     }
     computerPlay();
-    // console.log(compChoice);
 
     let playerChoice = prompt("Please choose Rock, Paper, or Scissors.").toLowerCase();
 
-    // These do not work.
+    // Working on error message. These do not work.
     // if (playerChoice != "rock" || playerChoice != "paper" || playerChoice != "scissors") {
     //     return playerChoice + " is not a valid input. Please enter either rock, paper, or scissors."
     // }
@@ -22,28 +21,28 @@ function playRound(){
     // }
     
     if (playerChoice == "rock" && compChoice == "Scissors") {
-        playerScore += 1; 
+        playerScore++; 
         return "Computer chose Scissors. Rock beats Scissors. YOU WIN!";
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
-        compScore += 1;
+        compScore++;
         return "Computer chose Paper. Paper beats Rock. YOU LOSE!";
     } else if (playerChoice == "rock" && compChoice == "Rock") {
         return "Computer chose Rock. It's a TIE!";
    
     } else if (playerChoice == "paper" && compChoice == "Rock") {
-        playerScore += 1; 
+        playerScore++; 
         return "Computer chose Rock, YOU WIN!";
     } else if (playerChoice == "paper" && compChoice == "Paper") {
         return "Computer chose Paper. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
-        compScore += 1;
+        compScore++;
         return "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
     
     } else if (playerChoice == "scissors" && compChoice == "Paper") {
-        playerScore += 1; 
+        playerScore++; 
         return "Computer chose Paper. Scissors beats Paper. YOU WIN!"
     } else if (playerChoice == "scissors" && compChoice == "Rock") {
-        compScore += 1;
+        compScore++;
         return "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
     } else if (playerChoice == "scissors" && compChoice == "Scissors") {
         return "Computer chose Scissors. It's a TIE!"
