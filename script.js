@@ -1,11 +1,19 @@
-const choices = ["Rock", "Paper", "Scissors"];
 
-function computerPlay() {
-    compChoice = choices[Math.floor(Math.random() * choices.length)];
-    return compChoice;
-}
-console.log(computerPlay());
+function game() {
+    function computerPlay() {
+        const choices = ["Rock", "Paper", "Scissors"];
+        compChoice = choices[Math.floor(Math.random() * choices.length)];
+        return compChoice;
+    }
+    console.log(computerPlay());
 
-function playerPlay() {
+    let playerChoice = prompt("Please choose Rock, Paper, or Scissors.").toLowerCase();
     
+    if (playerChoice == "rock" && compChoice == "Scissors") {
+        console.log(compChoice);
+        return "You win!"
+    }
+
 }
+
+console.log(game());
