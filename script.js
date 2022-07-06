@@ -17,20 +17,22 @@ function playRound(){
     // if (playerChoice = null) {
     //     return playerChoice + " is not a valid input. Please enter either rock, paper, or scissors."
     // }
+
+    let win = win;
+    let lose = lose;
+    let tie = tie;
     
     if (playerChoice == "rock" && compChoice == "Scissors") {
-        return "Computer chose Scissors. Rock beats Scissors. YOU WIN!"
+        return "Computer chose Scissors. Rock beats Scissors. YOU WIN!", win;
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
-        return "Computer chose Paper. Paper beats Rock. YOU LOSE!"
+        return "Computer chose Paper. Paper beats Rock. YOU LOSE!", lose;
     } else if (playerChoice == "rock" && compChoice == "Rock") {
-        return "Computer chose Rock. It's a TIE!"
+        return "Computer chose Rock. It's a TIE!", tie;
+   
     } else if (playerChoice == "paper" && compChoice == "Rock") {
-        return "Computer chose Rock, YOU WIN!"
-    
+        return "Computer chose Rock, YOU WIN!", win;
     } else if (playerChoice == "paper" && compChoice == "Paper") {
         return "Computer chose Paper. It's a TIE!"
-    } else if (playerChoice == "paper" && compChoice == "Rock") {
-        return "Computer chose Rock. Paper beats Rock. YOU WIN!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
         return "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
     
