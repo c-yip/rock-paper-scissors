@@ -34,7 +34,7 @@ function playRound(){
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
         return "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
     
-    }else if (playerChoice == "scissors" && compChoice == "Paper") {
+    } else if (playerChoice == "scissors" && compChoice == "Paper") {
         return "Computer chose Paper. Scissors beats Paper. YOU WIN!"
     } else if (playerChoice == "scissors" && compChoice == "Rock") {
         return "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
@@ -44,14 +44,20 @@ function playRound(){
 }
 
 function game() { 
-    function loop() {
+    let loop = function loop() {
         for (i = 0; i < 5; i++) {
             console.log("Round " + (i + 1));
             console.log(playRound());
         }
     }
     
-    return loop();
+    let score = 0;
+    function displayScore() {
+        if (loop == "Computer chose Scissors. Rock beats Scissors. YOU WIN!");
+        score = score + 1; 
+        console.log(score);
+    }
+    return loop(), displayScore();
     
 }
 
