@@ -12,29 +12,29 @@ function game() {
     
     if (playerChoice == "rock" && compChoice == "Scissors") {
         // console.log(compChoice);
-        return "Computer chose Scissors, YOU WIN!"
+        return "Computer chose Scissors. Rock beats Scissors. YOU WIN!"
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
         // console.log(compChoice);
-        return "Computer chose Paper, YOU LOSE!"
+        return "Computer chose Paper. Paper beats Rock. YOU LOSE!"
     } else if (playerChoice == "rock" && compChoice == "Rock") {
         // console.log(compChoice);
-        return "Computer chose Rock, it's a TIE!"
+        return "Computer chose Rock. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Rock") {
         return "Computer chose Rock, YOU WIN!"
     
     } else if (playerChoice == "paper" && compChoice == "Paper") {
-        return "Computer chose Paper, it's a TIE!"
+        return "Computer chose Paper. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Rock") {
-        return "Computer chose Rock, YOU WIN!"
+        return "Computer chose Rock. Paper beats Rock. YOU WIN!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
-        return "Computer chose Scissors, YOU LOSE!"
+        return "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
     
     }else if (playerChoice == "scissors" && compChoice == "Paper") {
-        return "Computer chose Paper, YOU WIN!"
+        return "Computer chose Paper. Scissors beats Paper. YOU WIN!"
     } else if (playerChoice == "scissors" && compChoice == "Rock") {
-        return "Computer chose Rock, YOU LOSE!"
+        return "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
     } else if (playerChoice == "scissors" && compChoice == "Scissors") {
-        return "Computer chose Scissor, it's a TIE!"
+        return "Computer chose Scissors. It's a TIE!"
     }
 }
 
