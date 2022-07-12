@@ -1,5 +1,14 @@
 let playerScore = 0;
 let compScore = 0;
+let playerChoice;
+
+// event listeners for each button
+
+const btnRock = document.querySelector(".btnRock");
+btnRock.addEventListener("click", function choice() {
+    playerChoice = "rock";
+    playRound();
+})
 
 function playRound(){
     function computerPlay() {
@@ -8,17 +17,6 @@ function playRound(){
         return compChoice;
     }
     computerPlay();
-
-    let playerChoice = prompt("Please choose Rock, Paper, or Scissors.").toLowerCase();
-
-    // Working on error message. These do not work.
-    // if (playerChoice != "rock" || playerChoice != "paper" || playerChoice != "scissors") {
-    //     return playerChoice + " is not a valid input. Please enter either rock, paper, or scissors."
-    // }
-
-    // if (playerChoice = null) {
-    //     return playerChoice + " is not a valid input. Please enter either rock, paper, or scissors."
-    // }
     
     if (playerChoice == "rock" && compChoice == "Scissors") {
         playerScore++; 
@@ -51,13 +49,13 @@ function playRound(){
 
 function game() { 
     // plays five rounds
-    // function loop() { 
-    //     for (i = 0; i < 5; i++) {
-    //         console.log("Round " + (i + 1));
-    //         console.log(playRound());
-    //         console.log("Player Score: " + playerScore + " | " + "Computer Score: " + compScore);
-    //     }
-    // }
+    function loop() { 
+        for (i = 0; i < 5; i++) {
+            console.log("Round " + (i + 1));
+            console.log(playRound());
+            console.log("Player Score: " + playerScore + " | " + "Computer Score: " + compScore);
+        }
+    }
     
     function result() {
         if (playerScore > compScore) {
@@ -71,11 +69,6 @@ function game() {
     return loop(), result();
 }
 
-// console.log(game());
+console.log(game());
 
-// event listeners for each button
 
-const btnRock = document.querySelector(".btnRock");
-btnRock.addEventListener("click", e => {
-    console.log(e);
-})
