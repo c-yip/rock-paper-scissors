@@ -1,0 +1,17 @@
+html, body {
+    background-color: #DBE2EF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    font-family: 'League Gothic', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
