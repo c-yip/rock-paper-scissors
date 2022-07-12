@@ -71,4 +71,11 @@ function game() {
     return loop(), result();
 }
 
-console.log(game());
+// console.log(game());
+
+// event listeners for each button
+
+const btnRock = document.querySelector(".btnRock");
+btnRock.addEventListener("click", e => {
+    console.log(e);
+})
