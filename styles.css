@@ -18,6 +18,11 @@ body {
 
 .finalResult {
     text-align: center;
+    font-size: 75px;
+}
+
+.fontSize {
+    font-size: initial;
 }
 
 .title {
