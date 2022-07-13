@@ -3,7 +3,8 @@ let compScore = 0;
 let playerChoice;
 
 const results = document.querySelector(".results");
-const score = document.querySelector(".score");
+const playerDisplayScore = document.querySelector(".playerDisplayScore");
+const computerDisplayScore = document.querySelector(".computerDisplayScore");
 const finalResult = document.querySelector(".finalResult");
 
 // event listeners for each button
