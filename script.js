@@ -2,13 +2,13 @@ let playerScore = 0;
 let compScore = 0;
 let playerChoice;
 
+// selects result, scores, results classes
 const results = document.querySelector(".results");
 const playerDisplayScore = document.querySelector(".playerDisplayScore");
 const computerDisplayScore = document.querySelector(".computerDisplayScore");
 const finalResult = document.querySelector(".finalResult");
 
 // event listeners for each button
-
 const btnRock = document.querySelector(".btnRock");
 btnRock.addEventListener("click", function e() {
     playerChoice = "rock";
@@ -62,6 +62,10 @@ function playRound(){
     } else if (playerChoice == "scissors" && compChoice == "Scissors") { 
         results.textContent = "Computer chose Scissors. It's a TIE!"
     }
+    
+    // sets player and computer scores to display in html
+    playerDisplayScore.textContent = playerScore;
+    computerDisplayScore.textContent = compScore;
 }
 
 
