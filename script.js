@@ -64,8 +64,8 @@ function playRound(){
     }
     
     // sets player and computer scores to display in html
-    playerDisplayScore.textContent = playerScore;
-    computerDisplayScore.textContent = compScore;
+    playerDisplayScore.textContent = "Player Score: " + playerScore;
+    computerDisplayScore.textContent = "Computer Score: " + compScore;
 }
 
 
