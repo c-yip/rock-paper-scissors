@@ -42,27 +42,34 @@ function playRound(){
         results.textContent = ("Computer chose Scissors. Rock beats Scissors. YOU WIN!");
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
         compScore++;
-        return "Computer chose Paper. Paper beats Rock. YOU LOSE!";
+        results.append("h1"); 
+        results.textContent = "Computer chose Paper. Paper beats Rock. YOU LOSE!";
     } else if (playerChoice == "rock" && compChoice == "Rock") {
         return "Computer chose Rock. It's a TIE!";
    
     } else if (playerChoice == "paper" && compChoice == "Rock") {
         playerScore++; 
-        return "Computer chose Rock, YOU WIN!";
+        results.append("h1"); 
+        results.textContent = "Computer chose Rock, YOU WIN!";
     } else if (playerChoice == "paper" && compChoice == "Paper") {
-        return "Computer chose Paper. It's a TIE!"
+        results.append("h1"); 
+        results.textContent = "Computer chose Paper. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
         compScore++;
-        return "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
+        results.append("h1"); 
+        results.textContent = "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
     
     } else if (playerChoice == "scissors" && compChoice == "Paper") {
         playerScore++; 
-        return "Computer chose Paper. Scissors beats Paper. YOU WIN!"
+        results.append("h1"); 
+        results.textContent = "Computer chose Paper. Scissors beats Paper. YOU WIN!"
     } else if (playerChoice == "scissors" && compChoice == "Rock") {
         compScore++;
-        return "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
+        results.append("h1"); 
+        results.textContent = "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
     } else if (playerChoice == "scissors" && compChoice == "Scissors") {
-        return "Computer chose Scissors. It's a TIE!"
+        results.append("h1"); 
+        results.textContent = "Computer chose Scissors. It's a TIE!"
     }
 }
 
