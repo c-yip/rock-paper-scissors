@@ -2,6 +2,7 @@ let playerScore = 0;
 let compScore = 0;
 let tiedScore = 0;
 let playerChoice;
+let round = 0;
 
 // selects result, scores, results, and rounds classes
 const results = document.querySelector(".results");
@@ -15,18 +16,24 @@ const rounds = document.querySelector(".rounds");
 const btnRock = document.querySelector(".btnRock");
 btnRock.addEventListener("click", function e() {
     playerChoice = "rock";
+    round++;
+    rounds.textContent = "Round " + (round);
     playRound();
 })
 
 const btnPaper = document.querySelector(".btnPaper");
 btnPaper.addEventListener("click", function e() {
     playerChoice = "paper";
+    round++;
+    rounds.textContent = "Round " + (round);
     playRound();
 })
 
 const btnScissors = document.querySelector(".btnScissors");
 btnScissors.addEventListener("click", function e() {
     playerChoice = "scissors";
+    round++;
+    rounds.textContent = "Round " + (round);
     playRound();
 })
 
@@ -76,14 +83,14 @@ function playRound(){
 }
 
 
-function game() { 
-    // plays five rounds and changes round number
-    function loop() { 
-        for (i = 0; i < 5; i++) {
-            rounds.textContent = "Round " + (i + 1);
-            console.log(playRound());
-        }
-    }
+// function game() { 
+//     // plays five rounds and changes round number
+//     function loop() { 
+//         for (i = 0; i < 5; i++) {
+//             rounds.textContent = "Round " + (i + 1);
+//             console.log(playRound());
+//         }
+//     }
     
 //     function result() {
 //         if (playerScore > compScore) {
@@ -95,6 +102,6 @@ function game() {
 //         }
 //     }
 //     return loop(), result();
-}
+// }
 
 // console.log(game());
