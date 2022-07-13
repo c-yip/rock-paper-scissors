@@ -1,5 +1,6 @@
 let playerScore = 0;
 let compScore = 0;
+let tiedScore = 0;
 let playerChoice;
 
 // selects result, scores, results classes
@@ -7,6 +8,7 @@ const results = document.querySelector(".results");
 const playerDisplayScore = document.querySelector(".playerDisplayScore");
 const computerDisplayScore = document.querySelector(".computerDisplayScore");
 const finalResult = document.querySelector(".finalResult");
+const tiedDisplayScore = document.querySelector(".tiedDisplayScore")
 
 // event listeners for each button
 const btnRock = document.querySelector(".btnRock");
@@ -42,12 +44,14 @@ function playRound(){
         compScore++; 
         results.textContent = "Computer chose Paper. Paper beats Rock. YOU LOSE!";
     } else if (playerChoice == "rock" && compChoice == "Rock") { 
+        tiedScore++;
         results.textContent = "Computer chose Rock. It's a TIE!";
-   
+
     } else if (playerChoice == "paper" && compChoice == "Rock") {
         playerScore++;  
         results.textContent = "Computer chose Rock, YOU WIN!";
     } else if (playerChoice == "paper" && compChoice == "Paper") { 
+        tiedScore++;
         results.textContent = "Computer chose Paper. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
         compScore++; 
@@ -60,12 +64,14 @@ function playRound(){
         compScore++; 
         results.textContent = "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
     } else if (playerChoice == "scissors" && compChoice == "Scissors") { 
+        tiedScore++;
         results.textContent = "Computer chose Scissors. It's a TIE!"
     }
     
     // sets player and computer scores to display in html
     playerDisplayScore.textContent = "Player Score: " + playerScore;
     computerDisplayScore.textContent = "Computer Score: " + compScore;
+    tiedDisplayScore.textContent = "Tied: " + tiedScore;
 }
 
 
