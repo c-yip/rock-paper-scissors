@@ -3,6 +3,8 @@ let compScore = 0;
 let playerChoice;
 
 const results = document.querySelector(".results");
+const score = document.querySelector(".score");
+const finalResult = document.querySelector(".finalResult");
 
 // event listeners for each button
 
@@ -33,39 +35,30 @@ function playRound(){
     }
     computerPlay();
     if (playerChoice == "rock" && compChoice == "Scissors") {
-        playerScore++; 
-        results.append("h1"); 
+        playerScore++;  
         results.textContent = ("Computer chose Scissors. Rock beats Scissors. YOU WIN!");
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
-        compScore++;
-        results.append("h1"); 
+        compScore++; 
         results.textContent = "Computer chose Paper. Paper beats Rock. YOU LOSE!";
-    } else if (playerChoice == "rock" && compChoice == "Rock") {
-        results.append("h1"); 
+    } else if (playerChoice == "rock" && compChoice == "Rock") { 
         results.textContent = "Computer chose Rock. It's a TIE!";
    
     } else if (playerChoice == "paper" && compChoice == "Rock") {
-        playerScore++; 
-        results.append("h1"); 
+        playerScore++;  
         results.textContent = "Computer chose Rock, YOU WIN!";
-    } else if (playerChoice == "paper" && compChoice == "Paper") {
-        results.append("h1"); 
+    } else if (playerChoice == "paper" && compChoice == "Paper") { 
         results.textContent = "Computer chose Paper. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
-        compScore++;
-        results.append("h1"); 
+        compScore++; 
         results.textContent = "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
     
     } else if (playerChoice == "scissors" && compChoice == "Paper") {
-        playerScore++; 
-        results.append("h1"); 
+        playerScore++;  
         results.textContent = "Computer chose Paper. Scissors beats Paper. YOU WIN!"
     } else if (playerChoice == "scissors" && compChoice == "Rock") {
-        compScore++;
-        results.append("h1"); 
+        compScore++; 
         results.textContent = "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
-    } else if (playerChoice == "scissors" && compChoice == "Scissors") {
-        results.append("h1"); 
+    } else if (playerChoice == "scissors" && compChoice == "Scissors") { 
         results.textContent = "Computer chose Scissors. It's a TIE!"
     }
 }
