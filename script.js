@@ -2,7 +2,7 @@ let playerScore = 0;
 let compScore = 0;
 let playerChoice;
 
-
+const results = document.querySelector(".results");
 
 // event listeners for each button
 
@@ -38,7 +38,8 @@ function playRound(){
     console.log(playerChoice);
     if (playerChoice == "rock" && compChoice == "Scissors") {
         playerScore++; 
-        return "Computer chose Scissors. Rock beats Scissors. YOU WIN!";
+        results.append("h1"); 
+        results.textContent = ("Computer chose Scissors. Rock beats Scissors. YOU WIN!");
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
         compScore++;
         return "Computer chose Paper. Paper beats Rock. YOU LOSE!";
