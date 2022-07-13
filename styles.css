@@ -1,6 +1,7 @@
 html, body {
     background-color: #DBE2EF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -14,4 +15,11 @@ html, body {
     justify-content: center;
     align-items: center;
     gap: 100px;
+}
+
+.results {
+    display: flex;
+    background-color: blue;
+    color: white; 
+    padding: 200px;
 }
