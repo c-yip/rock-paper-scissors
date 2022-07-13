@@ -50,7 +50,7 @@ function playRound(){
         results.textContent = ("Computer chose Scissors. Rock beats Scissors. YOU WIN!");
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
         compScore++; 
-        results.textContent = "Computer chose Paper. Paper beats Rock. YOU LOSE!";
+        results.textContent = "Computer chose Paper. Paper beats Rock. COMPUTER WINS! LOSER!";
     } else if (playerChoice == "rock" && compChoice == "Rock") { 
         tiedScore++;
         results.textContent = "Computer chose Rock. It's a TIE!";
@@ -63,14 +63,14 @@ function playRound(){
         results.textContent = "Computer chose Paper. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
         compScore++; 
-        results.textContent = "Computer chose Scissors. Scissors beats Paper. YOU LOSE!"
+        results.textContent = "Computer chose Scissors. Scissors beats Paper. COMPUTER WINS! LOSER!"
     
     } else if (playerChoice == "scissors" && compChoice == "Paper") {
         playerScore++;  
         results.textContent = "Computer chose Paper. Scissors beats Paper. YOU WIN!"
     } else if (playerChoice == "scissors" && compChoice == "Rock") {
         compScore++; 
-        results.textContent = "Computer chose Rock. Rock beats Scissors. YOU LOSE!"
+        results.textContent = "Computer chose Rock. Rock beats Scissors. COMPUTER WINS! LOSER!"
     } else if (playerChoice == "scissors" && compChoice == "Scissors") { 
         tiedScore++;
         results.textContent = "Computer chose Scissors. It's a TIE!"
@@ -80,28 +80,11 @@ function playRound(){
     playerDisplayScore.textContent = "Player Score: " + playerScore;
     computerDisplayScore.textContent = "Computer Score: " + compScore;
     tiedDisplayScore.textContent = "Tied: " + tiedScore;
+
+    /// displays winner when either player reaches 5 points
+    if (playerScore == 5) {
+        finalResult.textContent = "YOU WIN!";
+    } else if (compScore == 5) {
+        finalResult.textContent = "COMPUTER WINS! LOSER!"
+    }
 }
-
-
-// function game() { 
-//     // plays five rounds and changes round number
-//     function loop() { 
-//         for (i = 0; i < 5; i++) {
-//             rounds.textContent = "Round " + (i + 1);
-//             console.log(playRound());
-//         }
-//     }
-    
-//     function result() {
-//         if (playerScore > compScore) {
-//             console.log("FINAL RESULT: YOU WIN!");
-//         } else if (playerScore < compScore) {
-//             console.log("FINAL RESULT: YOU LOSE!");
-//         } else if (playerScore == compScore) {
-//             console.log("FINAL RESULT: IT'S A TIE. BOOOOOO!")
-//         }
-//     }
-//     return loop(), result();
-// }
-
-// console.log(game());
