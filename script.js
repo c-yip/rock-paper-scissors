@@ -47,30 +47,30 @@ function playRound(){
     computerPlay();
     if (playerChoice == "rock" && compChoice == "Scissors") {
         playerScore++;  
-        results.textContent = ("Computer chose Scissors. Rock beats Scissors. YOU WIN!");
+        results.textContent = ("Computer chose Scissors. Rock beats Scissors. You win this round.");
     } else if (playerChoice == "rock"  && compChoice == "Paper") {
         compScore++; 
-        results.textContent = "Computer chose Paper. Paper beats Rock. COMPUTER WINS! LOSER!";
+        results.textContent = "Computer chose Paper. Paper beats Rock. Computer wins this round.";
     } else if (playerChoice == "rock" && compChoice == "Rock") { 
         tiedScore++;
         results.textContent = "Computer chose Rock. It's a TIE!";
 
     } else if (playerChoice == "paper" && compChoice == "Rock") {
         playerScore++;  
-        results.textContent = "Computer chose Rock, YOU WIN!";
+        results.textContent = "Computer chose Rock, You win this round.";
     } else if (playerChoice == "paper" && compChoice == "Paper") { 
         tiedScore++;
         results.textContent = "Computer chose Paper. It's a TIE!"
     } else if (playerChoice == "paper" && compChoice == "Scissors") {
         compScore++; 
-        results.textContent = "Computer chose Scissors. Scissors beats Paper. COMPUTER WINS! LOSER!"
+        results.textContent = "Computer chose Scissors. Scissors beats Paper. Computer wins this round."
     
     } else if (playerChoice == "scissors" && compChoice == "Paper") {
         playerScore++;  
-        results.textContent = "Computer chose Paper. Scissors beats Paper. YOU WIN!"
+        results.textContent = "Computer chose Paper. Scissors beats Paper. You win this round."
     } else if (playerChoice == "scissors" && compChoice == "Rock") {
         compScore++; 
-        results.textContent = "Computer chose Rock. Rock beats Scissors. COMPUTER WINS! LOSER!"
+        results.textContent = "Computer chose Rock. Rock beats Scissors. Computer wins this round."
     } else if (playerChoice == "scissors" && compChoice == "Scissors") { 
         tiedScore++;
         results.textContent = "Computer chose Scissors. It's a TIE!"
