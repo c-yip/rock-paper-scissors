@@ -9,21 +9,18 @@ const results = document.querySelector(".results");
 const btnRock = document.querySelector(".btnRock");
 btnRock.addEventListener("click", function e() {
     playerChoice = "rock";
-    console.log(playerChoice);
     playRound();
 })
 
 const btnPaper = document.querySelector(".btnPaper");
 btnPaper.addEventListener("click", function e() {
     playerChoice = "paper";
-    console.log(playerChoice);
     playRound();
 })
 
 const btnScissors = document.querySelector(".btnScissors");
 btnScissors.addEventListener("click", function e() {
     playerChoice = "scissors";
-    console.log(playerChoice);
     playRound();
 })
 
@@ -35,7 +32,6 @@ function playRound(){
         return compChoice;
     }
     computerPlay();
-    console.log(playerChoice);
     if (playerChoice == "rock" && compChoice == "Scissors") {
         playerScore++; 
         results.append("h1"); 
