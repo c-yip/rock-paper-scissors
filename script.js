@@ -45,7 +45,8 @@ function playRound(){
         results.append("h1"); 
         results.textContent = "Computer chose Paper. Paper beats Rock. YOU LOSE!";
     } else if (playerChoice == "rock" && compChoice == "Rock") {
-        return "Computer chose Rock. It's a TIE!";
+        results.append("h1"); 
+        results.textContent = "Computer chose Rock. It's a TIE!";
    
     } else if (playerChoice == "paper" && compChoice == "Rock") {
         playerScore++; 
