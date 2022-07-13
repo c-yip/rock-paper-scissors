@@ -2,14 +2,32 @@ let playerScore = 0;
 let compScore = 0;
 let playerChoice;
 
+
+
 // event listeners for each button
 
 const btnRock = document.querySelector(".btnRock");
-btnRock.addEventListener("click", function choice() {
+btnRock.addEventListener("click", function e() {
     playerChoice = "rock";
+    console.log(playerChoice);
     playRound();
 })
 
+const btnPaper = document.querySelector(".btnPaper");
+btnPaper.addEventListener("click", function e() {
+    playerChoice = "paper";
+    console.log(playerChoice);
+    playRound();
+})
+
+const btnScissors = document.querySelector(".btnScissors");
+btnScissors.addEventListener("click", function e() {
+    playerChoice = "scissors";
+    console.log(playerChoice);
+    playRound();
+})
+
+// generates computer input and plays round of game
 function playRound(){
     function computerPlay() {
         const choices = ["Rock", "Paper", "Scissors"];
@@ -17,7 +35,7 @@ function playRound(){
         return compChoice;
     }
     computerPlay();
-    
+    console.log(playerChoice);
     if (playerChoice == "rock" && compChoice == "Scissors") {
         playerScore++; 
         return "Computer chose Scissors. Rock beats Scissors. YOU WIN!";
@@ -47,28 +65,29 @@ function playRound(){
     }
 }
 
-function game() { 
-    // plays five rounds
-    function loop() { 
-        for (i = 0; i < 5; i++) {
-            console.log("Round " + (i + 1));
-            console.log(playRound());
-            console.log("Player Score: " + playerScore + " | " + "Computer Score: " + compScore);
-        }
-    }
-    
-    function result() {
-        if (playerScore > compScore) {
-            console.log("FINAL RESULT: YOU WIN!");
-        } else if (playerScore < compScore) {
-            console.log("FINAL RESULT: YOU LOSE!");
-        } else if (playerScore == compScore) {
-            console.log("FINAL RESULT: IT'S A TIE. BOOOOOO!")
-        }
-    }
-    return loop(), result();
-}
 
-console.log(game());
+// function game() { 
+//     // plays five rounds
+//     function loop() { 
+//         for (i = 0; i < 5; i++) {
+//             console.log("Round " + (i + 1));
+//             console.log(playRound());
+//             console.log("Player Score: " + playerScore + " | " + "Computer Score: " + compScore);
+//         }
+//     }
+    
+//     function result() {
+//         if (playerScore > compScore) {
+//             console.log("FINAL RESULT: YOU WIN!");
+//         } else if (playerScore < compScore) {
+//             console.log("FINAL RESULT: YOU LOSE!");
+//         } else if (playerScore == compScore) {
+//             console.log("FINAL RESULT: IT'S A TIE. BOOOOOO!")
+//         }
+//     }
+//     return loop(), result();
+// }
+
+// console.log(game());
 
 
