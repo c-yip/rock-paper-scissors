@@ -3,12 +3,13 @@ let compScore = 0;
 let tiedScore = 0;
 let playerChoice;
 
-// selects result, scores, results classes
+// selects result, scores, results, and rounds classes
 const results = document.querySelector(".results");
 const playerDisplayScore = document.querySelector(".playerDisplayScore");
 const computerDisplayScore = document.querySelector(".computerDisplayScore");
 const finalResult = document.querySelector(".finalResult");
-const tiedDisplayScore = document.querySelector(".tiedDisplayScore")
+const tiedDisplayScore = document.querySelector(".tiedDisplayScore");
+const rounds = document.querySelector(".rounds");
 
 // event listeners for each button
 const btnRock = document.querySelector(".btnRock");
@@ -75,15 +76,14 @@ function playRound(){
 }
 
 
-// function game() { 
-//     // plays five rounds
-//     function loop() { 
-//         for (i = 0; i < 5; i++) {
-//             console.log("Round " + (i + 1));
-//             console.log(playRound());
-//             console.log("Player Score: " + playerScore + " | " + "Computer Score: " + compScore);
-//         }
-//     }
+function game() { 
+    // plays five rounds and changes round number
+    function loop() { 
+        for (i = 0; i < 5; i++) {
+            rounds.textContent = "Round " + (i + 1);
+            console.log(playRound());
+        }
+    }
     
 //     function result() {
 //         if (playerScore > compScore) {
@@ -95,8 +95,6 @@ function playRound(){
 //         }
 //     }
 //     return loop(), result();
-// }
+}
 
 // console.log(game());
-
-
