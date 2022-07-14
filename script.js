@@ -91,6 +91,7 @@ const modal = document.querySelector(".modal");
 const btnModalReset = document.querySelector(".btnModalReset");
 const overlay = document.getElementById("overlay");
 const modalContent = document.querySelector(".modal-content");
+const closeModal = document.querySelector(".closeModal");
 
 function gameEnds() {
     if (playerScore == 5 || compScore == 5) {
@@ -108,6 +109,11 @@ function opensModal() {
         }
 }
 
+closeModal.addEventListener('click', () => {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+})
+
 btnModalReset.addEventListener('click', () => {
     modal.classList.remove("active");
     overlay.classList.remove("active");
@@ -119,4 +125,5 @@ btnModalReset.addEventListener('click', () => {
     computerDisplayScore.textContent = "Computer Score: " + compScore;
     tiedDisplayScore.textContent = "Tied: " + tiedScore;
     rounds.textContent = "Round " + (round);
+    results.textContent = "Feeling luck?"
 })
