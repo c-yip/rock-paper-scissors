@@ -38,6 +38,7 @@ body {
     justify-content: center;
     background-color: #FAD9A1;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .score {
@@ -90,13 +91,31 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     z-index: 10;
-    background-color: white;
-    width: 500px;
+    background-color: #FAD9A1;
+    width: 400px;
     max-width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+.container-modal-content {
+    display: flex;
+    flex-direction: column;
 }
 
 #overlay {
@@ -114,4 +133,33 @@ body {
 #overlay.active {
     opacity: 1;
     pointer-events: all;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px
+}
+
+.closeModal {
+    background-color: #FAD9A1;
+    border: 0;
+    cursor: pointer;
+}
+
+.container-btnModalReset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.btnModalReset {
+    background-color: #F37878;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    border: 0;
+    padding: 10px;
 }
