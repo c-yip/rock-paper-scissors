@@ -19,6 +19,7 @@ btnRock.addEventListener("click", function e() {
     round++;
     rounds.textContent = "Round " + (round);
     playRound();
+    gameEnds();
 })
 
 const btnPaper = document.querySelector(".btnPaper");
@@ -27,6 +28,7 @@ btnPaper.addEventListener("click", function e() {
     round++;
     rounds.textContent = "Round " + (round);
     playRound();
+    gameEnds();
 })
 
 const btnScissors = document.querySelector(".btnScissors");
@@ -35,6 +37,7 @@ btnScissors.addEventListener("click", function e() {
     round++;
     rounds.textContent = "Round " + (round);
     playRound();
+    gameEnds();
 })
 
 // generates computer input and plays round of game
@@ -82,9 +85,31 @@ function playRound(){
     tiedDisplayScore.textContent = "Tied: " + tiedScore;
 
     /// displays winner when either player reaches 5 points
-    if (playerScore == 5) {
-        finalResult.textContent = "YOU WIN!";
-    } else if (compScore == 5) {
-        finalResult.textContent = "COMPUTER WINS! LOSER!"
+    // if (playerScore == 5) {
+    //     finalResult.textContent = "YOU WIN!";
+    // } else if (compScore == 5) {
+    //     finalResult.textContent = "COMPUTER WINS! LOSER!"
+    // }
+}
+
+// modal
+
+const modal = document.querySelector(".modal");
+const btnModalReset = document.querySelector(".btnModalReset");
+const overlay = document.getElementById("overlay");
+
+function gameEnds() {
+    if (playerScore == 5 || compScore == 5) {
+        opensModal();
     }
 }
+
+function opensModal() {
+    modal.classList.add("active");
+    overlay.classList.add("active");
+}
+
+btnModalReset.addEventListener('click', () => {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+})
