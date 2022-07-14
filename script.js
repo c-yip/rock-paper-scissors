@@ -83,13 +83,6 @@ function playRound(){
     playerDisplayScore.textContent = "Player Score: " + playerScore;
     computerDisplayScore.textContent = "Computer Score: " + compScore;
     tiedDisplayScore.textContent = "Tied: " + tiedScore;
-
-    /// displays winner when either player reaches 5 points
-    // if (playerScore == 5) {
-    //     finalResult.textContent = "YOU WIN!";
-    // } else if (compScore == 5) {
-    //     finalResult.textContent = "COMPUTER WINS! LOSER!"
-    // }
 }
 
 // modal
@@ -97,6 +90,7 @@ function playRound(){
 const modal = document.querySelector(".modal");
 const btnModalReset = document.querySelector(".btnModalReset");
 const overlay = document.getElementById("overlay");
+const modalContent = document.querySelector(".modal-content");
 
 function gameEnds() {
     if (playerScore == 5 || compScore == 5) {
@@ -107,9 +101,22 @@ function gameEnds() {
 function opensModal() {
     modal.classList.add("active");
     overlay.classList.add("active");
+    if (playerScore == 5) {
+            modalContent.textContent = "YOU WIN!";
+        } else if (compScore == 5) {
+            modalContent.textContent = "COMPUTER WINS! LOSER!";
+        }
 }
 
 btnModalReset.addEventListener('click', () => {
     modal.classList.remove("active");
     overlay.classList.remove("active");
+    playerScore = 0;
+    compScore = 0;
+    tiedScore = 0;
+    round = 0;
+    playerDisplayScore.textContent = "Player Score: " + playerScore;
+    computerDisplayScore.textContent = "Computer Score: " + compScore;
+    tiedDisplayScore.textContent = "Tied: " + tiedScore;
+    rounds.textContent = "Round " + (round);
 })
